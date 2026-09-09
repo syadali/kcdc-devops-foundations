@@ -1,0 +1,14 @@
+bin/
+obj/
+publish/
+*.user
+.vs/
+.vscode/
+.DS_Store
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfplan
+tfplan
+.terraform.lock.hcl

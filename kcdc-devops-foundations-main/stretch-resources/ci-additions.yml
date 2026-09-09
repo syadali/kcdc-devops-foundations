@@ -1,0 +1,26 @@
+# Snippets for Lab 2 stretch goals — copy the pieces you want into .github/workflows/ci.yml
+
+# --- Manual trigger (Lab 2.5): add as a third key under `on:` ---
+# on:
+#   push: ...
+#   pull_request: ...
+#   workflow_dispatch:
+
+# --- Status badge (Lab 2.5): add to the top of README.md, replacing <you> ---
+# ![CI](https://github.com/<you>/kcdc-devops-foundations/actions/workflows/ci.yml/badge.svg)
+
+# --- NuGet caching (Lab 2.7): add to the setup-dotnet step ---
+#      - uses: actions/setup-dotnet@v4
+#        with:
+#          dotnet-version: '10.0.x'
+#          cache: true
+#          cache-dependency-path: '**/packages.lock.json'
+
+# --- Matrix build (Lab 2.7): add under the job, and use the variable in setup-dotnet ---
+#    strategy:
+#      matrix:
+#        dotnet: ['10.0.x', '9.0.x']
+#    steps:
+#      - uses: actions/setup-dotnet@v4
+#        with:
+#          dotnet-version: ${{ matrix.dotnet }}
